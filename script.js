@@ -67,5 +67,5 @@ teamMembers.forEach(member => {
         <p class="card-subtitle mb-2 text-body-secondary">${member.role}</p>
         <a href="mailto:${member.email}">${member.email}</a>
       </div>
-    </div>`
+    </div>`;
 }) 
