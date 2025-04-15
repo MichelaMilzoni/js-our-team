@@ -9,7 +9,7 @@
 //? anche vostra se volete sentirvi parte del team! :sorridere:)
 
 
-
+//TODO: DEFINISCO ARRAY DI OGGETTI
 const teamMembers = [
   {
     name: "Marco Bianchi",
@@ -48,3 +48,24 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+//TODO: SELEZIONO IL CONTENITORE
+const teamContainer = document.getElementById("team-container");
+//* cerco elemento HTML tramite id e lo memorizzo in una variabile, così posso utilizzarlo
+
+//TODO: CREAZIONE DINAMICA DELLA CARD
+teamMembers.forEach(member => { 
+  //! forEach. esegue il codice all'interno della arrow function PER OGNI oggetto dell'array 
+  teamContainer.innerHTML +=
+  //! +=        serve per AGGIUNGERE (append) nuove card al contenitore,
+  //!           senza sovrascrivere il contenuto esistente
+  //! dentro la stringa innerHTML, creo una card con le info del membro
+  ` <div class="card text-start" style="display: flex; flex-direction: row; align-items: center;">
+      <img src="${member.img}" class="img-fluid" style="width: auto; height: auto; margin-right: 10px;" alt="${member.name}">
+      <div class="card-body ms-2">
+        <h5 class="card-title">${member.name}</h5>
+        <p class="card-subtitle mb-2 text-body-secondary">${member.role}</p>
+        <a href="mailto:${member.email}">${member.email}</a>
+      </div>
+    </div>`
+}) 
