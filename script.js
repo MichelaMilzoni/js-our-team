@@ -60,12 +60,23 @@ teamMembers.forEach(member => {
   //! +=        serve per AGGIUNGERE (append) nuove card al contenitore,
   //!           senza sovrascrivere il contenuto esistente
   //! dentro la stringa innerHTML, creo una card con le info del membro
-  ` <div class="card text-start" style="display: flex; flex-direction: row; align-items: center;">
-      <img src="${member.img}" class="img-fluid" style="width: auto; height: auto; margin-right: 10px;" alt="${member.name}">
-      <div class="card-body ms-2">
-        <h5 class="card-title">${member.name}</h5>
-        <p class="card-subtitle mb-2 text-body-secondary">${member.role}</p>
-        <a href="mailto:${member.email}">${member.email}</a>
+  // ` <div class="card text-start" style="display: flex; flex-direction: row; align-items: center;">
+  //     <img src="${member.img}" class="img-fluid" style="width: 100px; height: auto; margin-right: 10px;" alt="${member.name}">
+  //     <div class="card-body ms-2">
+  //       <h5 class="card-title">${member.name}</h5>
+  //       <p class="card-subtitle mb-2 text-body-secondary">${member.role}</p>
+  //       <a href="mailto:${member.email}">${member.email}</a>
+  //     </div>
+  //   </div>`;
+  ` <div class="col-1-3">
+      <div class="card text-start" style="display: flex; flex-direction: row; align-items: center;">
+        <img src="${member.img}" class="img-fluid" style="width: auto; height: auto;" alt="${member.img}">
+        <div class="card-body ms-2">
+          <h5 class="card-title">${member.name}</h5>
+          <p class="card-subtitle mb-2 text-body-secondary">${member.role}</p>
+          <a href="mailto:${member.email}">${member.email}</a>
+        </div>
       </div>
-    </div>`;
+    </div>
+  `
 }) 

@@ -34,7 +34,7 @@ ul {
 }
 
 .container {
-    max-width: 1100px; /* Larghezza massima */
+    max-width: 1400px; /* Larghezza massima */
     margin-left: auto;
     margin-right: auto;
     padding-left: 1rem;
@@ -96,6 +96,21 @@ ul {
 
 
     /* MAIN */
+#team-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  background-color: white;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow:  2px 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+}
 
 
     /* FOOTER */
